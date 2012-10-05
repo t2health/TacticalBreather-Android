@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Tactical Breather</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+	<link href="reset-min.css" type="text/css" rel="stylesheet" />
+	<link href="jquery-ui-1.8.12.custom/css/dark-hive/jquery-ui-1.8.12.custom.css" type="text/css" rel="stylesheet" />
+	
+	<link href="breathe.css" type="text/css" rel="stylesheet" />
+	<link href="breathe_animation.css" type="text/css" rel="stylesheet" />
+	<!-- TODO: don't include separate jquery ui .js files here.  Instead, roll a new custom from jqueryui.com. -->
+	<script src="jquery-ui-1.8.12.custom/development-bundle/jquery-1.5.1.js" type="text/javascript" ></script>
+	<script src="jquery-ui-1.8.12.custom/development-bundle/ui/jquery-ui-1.8.12.custom.js" type="text/javascript" ></script>
+	<script src="jquery.timers-1.2.js" type="text/javascript"></script>
+	<script src="phonegap/phonegap.0.9.5.js" type="text/javascript"></script>
+	<script src="flurry/flurry.js" type="text/javascript"></script>
+	<script src="breathe.js" type="text/javascript" ></script>
+	<script src="mediawrapper.js" type="text/javascript" ></script>
+	<script src="noclickdelay.js" type="text/javascript" ></script>
+	<script src="preferences/preferences.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="header">
+  		<img id="logo" src="images/TacticalBreather-wordmark.png" alt="" />
+	</div>
+	<div id="wrap">
+		<div "id="breather_wrap">
+			<img id="orb_green" class="orb inhale" src="images/glass_green_trim.png" />
+			<img id="orb_yellow_full" class="orb hold full" src="images/glass_yellow_trim.png" />
+			<img id="orb_red" class="orb exhale" src="images/glass_red_trim.png"/>
+			<img id="orb_yellow_empty" class="orb hold empty" src="images/glass_yellow_trim.png" />
+			<div id="counter" class="orbtext counter">&nbsp;</div>
+			<div id="instruction" class="orbtext instruct">&nbsp;</div>
+		</div>
+		<input type="image" id="speaker_unmuted" src="images/speaker_unmuted.png" alt="">
+		<input type="image" id="speaker_muted" src="images/speaker_muted.png" alt="" />
+	</div>
+	<img id="lungs" src="images/background-nologo.png" alt="" />
+	<div id="footer">
+		<button type="button" class="ui-state-default ui-corner-all button" id="introButton">Intro</button>
+		&nbsp;
+		<button type="button" class="ui-state-default ui-corner-all button" id="tutorialButton">Tutorial</button>
+		&nbsp;
+		<button type="button" class="ui-state-default ui-corner-all button" id="breatheButton">Breathe</button>
+	</div>
+	<!-- ==========================================================  -->
+	<!-- DIALOG  -->
+	<div id="dialog-message-settings" title="Settings" style="display:none">
+		<div id="radio_voice">
+			<label>Voice</label><br>
+			<input type="radio" name="voice" id="female" value="female"/>
+			<label for="female">Female</label>
+			
+			<input type="radio" name="voice" id="male" value="male"/>
+			<label for="male">Male</label>
+		</div>
+		<br>
+		<div id="radio_audio">
+			<label>Mute Breathe Audio</label><br>
+			<input type="radio" name="audio" id="no" value="no"/>
+			<label for="no">No</label>
+			
+			<input type="radio" name="audio" id="yes" value="yes"/>
+			<label for="yes">Yes</label>
+		</div>
+		<br>
+		<div id="radio_vibration">
+			<label>Vibration</label><br>
+			<input type="radio" name="vibrate" id="noVibration" value="noVibration"/>
+			<label for="noVibration">No</label>
+			
+			<input type="radio" name="vibrate" id="yesVibration" value="yesVibration"/>
+			<label for="yesVibration">Yes</label>
+		</div>
+		<br>
+		<div id="radio_flurry">
+			<label>Send Anonymous Data</label><br>
+			<input type="radio" name="flurry" id="noFlurry" value="noFlurry"/>
+			<label for="noFlurry">No</label>
+			
+			<input type="radio" name="flurry" id="yesFlurry" value="yesFlurry"/>
+			<label for="yesFlurry">Yes</label>
+		</div>
+	</div>
+
+	<!-- END DIALOG  -->
+</body>
+</html>

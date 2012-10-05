@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	 <string-array name="listArrayVoice">
+        <item name="female">Female</item>
+        <item name="male">Male</item>
+    </string-array>
+    <string-array name="listValuesVoice">
+        <item name="female">female</item>
+        <item name="male">male</item>
+    </string-array>
+    
+    <string-array name="listArrayMute">
+        <item name="yes">Yes</item>
+        <item name="no">No</item>
+    </string-array>
+    <string-array name="listValuesMute">
+        <item name="yes">yes</item>
+        <item name="no">no</item>
+    </string-array>
+    
+    <string-array name="listArrayVibrate">
+        <item name="yes">Yes</item>
+        <item name="no">No</item>
+    </string-array>
+    <string-array name="listValuesVibrate">
+        <item name="yes">yes</item>
+        <item name="no">no</item>
+    </string-array>
+    
+    <string-array name="listArrayAnonymous">
+        <item name="yes">Yes</item>
+        <item name="no">No</item>
+    </string-array>
+    <string-array name="listValuesAnonymous">
+        <item name="yes">yes</item>
+        <item name="no">no</item>
+    </string-array>
+</resources>
